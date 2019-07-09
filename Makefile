@@ -1,4 +1,5 @@
 CFN_TEMPLATES=$(wildcard *.yml */*.yml */*/*.yml)
+ARTEFACTS_BUCKET="YOUR_BUCKET_NAME"
 
 .PHONY: python-test-step1 python-test-step2 python-test-step3 python-test-final python-build deploy-macro deploy-s3 deploy-vpc cfn-lint goto-step1 goto-step2 goto-step3 goto-step4 goto-finished
 python-test-step1:
@@ -24,11 +25,10 @@ node-test-final:
 	@mocha test node/finished/test
 
 python-build:
-# TODO fix hardcoded bucket
-	@aws cloudformation package --template-file ./python/finished/macro-template.yml --s3-bucket lambda-artefacts-bucket-1dd4wu1p9m98k --output-template-file packaged-macro.yml
+	@aws cloudformation package --template-file ./python/finished/macro-template.yml --s3-bucket $(ARTEFACTS_BUCKET) --output-template-file packaged-macro.yml
 
 node-build:
-	@aws cloudformation package --template-file ./node/finished/macro-template.yml --s3-bucket lambda-artefacts-bucket-1dd4wu1p9m98k --output-template-file packaged-macro.yml
+	@aws cloudformation package --template-file ./node/finished/macro-template.yml --s3-bucket $(ARTEFACTS_BUCKET) --output-template-file packaged-macro.yml
 
 deploy-macro:
 	@aws cloudformation deploy --template-file ./packaged-macro.yml --stack-name Macro-NaclExpander --capabilities CAPABILITY_IAM
