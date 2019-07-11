@@ -1,6 +1,6 @@
 # Step 3: Create NACL Entries
 
-In this step we build upon our knowledge from the previous step to build the entries for the NACL.
+In this step we build upon our knowledge from the previous step to build the entries for the NACL. If you haven't done so yet, make sure you switch your local copy to this same branch by running the command `git checkout step3`.
 
 ## Step 3.1 Create NetworkAclEntry resources
 
@@ -62,4 +62,4 @@ The syntax for the Inbound and Outbound entries is:
 
 ## Proceed to Step 4
 
-Once you have the above working, please check out branch `step4` of the repository to proceed.
+Once you have the above working, please [proceed to step 4](https://github.com/ArjenSchwarz/workshop-cfn-macros/blob/step4/step4.md).

@@ -1,6 +1,6 @@
 # Step 2: Create associations
 
-In this step we will make our Macro do some actual work! Estimated completion time < 1 hour
+In this step we will make our Macro do some actual work! If you haven't done so yet, make sure you switch your local copy to this same branch by running the command `git checkout step2`.
 
 ## 2.1 Associate a NetworkAcl object to Subnets
 
@@ -38,4 +38,4 @@ One important note, remember that every resource in CloudFormation needs its own
 
 ## Proceed to Step 3
 
-Once you have the above working, please check out branch `step3` of the repository to proceed.
+Once you have the above working, please proceed to [step 3](https://github.com/ArjenSchwarz/workshop-cfn-macros/blob/step3/step3.md).
