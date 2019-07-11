@@ -1,6 +1,6 @@
 # That's all folks
 
-This step is the last step of the workshop, and allows you to test your end result.
+This step is the last step of the workshop, and allows you to test your end result. If you haven't done so yet, make sure you switch your local copy to this same branch by running the command `git checkout finished`.
 
 ## Test that it all works
 
